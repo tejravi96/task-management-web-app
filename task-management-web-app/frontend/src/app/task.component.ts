@@ -6,7 +6,7 @@ import { TaskService } from './task.service';
 })
 export class TaskComponent implements OnInit {
   tasks: any[] = [];
-  newTask = { title: '', description: '' };
+  newTask: any = { id: null, title: '', description: '' };
   constructor(private service: TaskService) {}
   ngOnInit() { this.loadTasks(); }
   loadTasks() {
