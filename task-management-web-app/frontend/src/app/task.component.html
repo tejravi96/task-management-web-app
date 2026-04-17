@@ -1,10 +1,16 @@
 <h2>Task Manager</h2>
+
 <input [(ngModel)]="newTask.title" placeholder="Title">
 <input [(ngModel)]="newTask.description" placeholder="Description">
+
 <button (click)="addTask()">Add Task</button>
+<button (click)="updateTask()">Update Task</button>
+
 <ul>
   <li *ngFor="let task of tasks">
     {{task.title}} - {{task.description}}
+
+    <button (click)="editTask(task)">Edit</button>
     <button (click)="deleteTask(task.id)">Delete</button>
   </li>
 </ul>
