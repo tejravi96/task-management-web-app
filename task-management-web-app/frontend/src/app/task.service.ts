@@ -8,3 +8,6 @@ export class TaskService {
   addTask(task: any) { return this.http.post(this.apiUrl, task); }
   deleteTask(id: number) { return this.http.delete(`${this.apiUrl}/${id}`); }
 }
+updateTask(id: number, task: any) {
+  return this.http.put(`http://localhost:8080/tasks/${id}`, task);
+}
