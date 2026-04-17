@@ -1,0 +1,7 @@
+CREATE DATABASE taskdb;
+USE taskdb;
+CREATE TABLE task (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255),
+    description VARCHAR(255)
+);
